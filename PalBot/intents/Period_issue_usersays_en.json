@@ -1,0 +1,41 @@
+[
+  {
+    "id": "a95f4e2a-641f-4449-933d-8545f78681a6",
+    "data": [
+      {
+        "text": "Good! I am looking for pill  for a stomach pain",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2610200e-878f-44a2-832f-2e6c6c9e4ba6",
+    "data": [
+      {
+        "text": "fine",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3fb58da4-60d6-4b58-8f2a-757d4a789d55",
+    "data": [
+      {
+        "text": "I have a stomach pain",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "id": "3e959db2-1f0b-4c78-8df4-3f9a6fa076bd",
+  "name": "webhook",
+  "auto": true,
+  "contexts": [],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

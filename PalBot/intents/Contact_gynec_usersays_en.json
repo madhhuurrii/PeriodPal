@@ -1,0 +1,41 @@
+[
+  {
+    "id": "6346d9ec-8149-4868-8204-8ac81a24ba4f",
+    "data": [
+      {
+        "text": "doctor near me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8b7ab43b-8b8e-443e-be31-5c18e74f2c88",
+    "data": [
+      {
+        "text": "Can I contact a doctor?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "91c0f918-63d5-4f37-ba24-39290ee58251",
+    "data": [
+      {
+        "text": "Gynecologist near me?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]
