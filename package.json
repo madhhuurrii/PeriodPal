@@ -1,0 +1,16 @@
+{
+  "name": "period-tracker-gh-pages",
+  "version": "1.0.0",
+  "description": "Live demo []",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "actions-on-google": "^2.13.0",
+    "dialogflow-fulfillment": "^0.6.1",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A minimal period tracker web app">
+  <meta name="theme-color" content="#0099FF">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Period Tracker</title>
+  <link rel="icon" href="images/droplet-drop-pngrepo-com.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="images/droplet-drop-pngrepo-com.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="images/droplet-drop-pngrepo-com.png" sizes="96x96" type="image/png">
+  <link rel="icon apple-touch-icon" href="images/droplet-drop-pngrepo-com.png" sizes="180x180" type="image/png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <symbol id="icon-home" viewBox="0 0 32 32">
+  <title>Home</title>
+  <path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
+  </symbol>
+  <symbol id="icon-edit" viewBox="0 0 32 32">
+  <title>edit</title>
+  <path d="M12 20l4-2 14-14-2-2-14 14-2 4zM9.041 27.097c-0.989-2.085-2.052-3.149-4.137-4.137l3.097-8.525 4-2.435 12-12h-6l-12 12-6 20 20-6 12-12v-6l-12 12-2.435 4z"></path>
+  </symbol>
+  <symbol id="icon-calendar" viewBox="0 0 32 32">
+  <title>calendar</title>
+  <path d="M10 12h4v4h-4zM16 12h4v4h-4zM22 12h4v4h-4zM4 24h4v4h-4zM10 24h4v4h-4zM16 24h4v4h-4zM10 18h4v4h-4zM16 18h4v4h-4zM22 18h4v4h-4zM4 18h4v4h-4zM26 0v2h-4v-2h-14v2h-4v-2h-4v32h30v-32h-4zM28 30h-26v-22h26v22z"></path>
+  </symbol>
+  <symbol id="icon-settings" viewBox="0 0 32 32">
+  <title>FAQ</title>
+  <path d="M29.181 19.070c-1.679-2.908-0.669-6.634 2.255-8.328l-3.145-5.447c-0.898 0.527-1.943 0.829-3.058 0.829-3.361 0-6.085-2.742-6.085-6.125h-6.289c0.008 1.044-0.252 2.103-0.811 3.070-1.679 2.908-5.411 3.897-8.339 2.211l-3.144 5.447c0.905 0.515 1.689 1.268 2.246 2.234 1.676 2.903 0.672 6.623-2.241 8.319l3.145 5.447c0.895-0.522 1.935-0.82 3.044-0.82 3.35 0 6.067 2.725 6.084 6.092h6.289c-0.003-1.034 0.259-2.080 0.811-3.038 1.676-2.903 5.399-3.894 8.325-2.219l3.145-5.447c-0.899-0.515-1.678-1.266-2.232-2.226zM16 22.479c-3.578 0-6.479-2.901-6.479-6.479s2.901-6.479 6.479-6.479c3.578 0 6.479 2.901 6.479 6.479s-2.901 6.479-6.479 6.479z"></path>
+  </symbol>
+  <symbol id="icon-delete" viewBox="0 0 32 32">
+  <title>delete</title>
+  <path d="M4 10v20c0 1.1 0.9 2 2 2h18c1.1 0 2-0.9 2-2v-20h-22zM10 28h-2v-14h2v14zM14 28h-2v-14h2v14zM18 28h-2v-14h2v14zM22 28h-2v-14h2v14z"></path>
+  <path d="M26.5 4h-6.5v-2.5c0-0.825-0.675-1.5-1.5-1.5h-7c-0.825 0-1.5 0.675-1.5 1.5v2.5h-6.5c-0.825 0-1.5 0.675-1.5 1.5v2.5h26v-2.5c0-0.825-0.675-1.5-1.5-1.5zM18 4h-6v-1.975h6v1.975z"></path>
+  </symbol>
+  <symbol id="icon-log" viewBox="0 0 32 32">
+  <title>log</title>
+  <path d="M12 2h20v4h-20v-4zM12 14h20v4h-20v-4zM12 26h20v4h-20v-4zM0 4c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4zM0 16c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4zM0 28c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4z"></path>
+  </symbol>
+  <symbol id="icon-next" viewBox="0 0 32 32">
+  <title>next</title>
+  <path d="M6 4l20 12-20 12z"></path>
+  </symbol>
+  <symbol id="icon-prev" viewBox="0 0 32 32">
+  <title>prev</title>
+  <path d="M26 4l-20 12 20 12z"></path>
+  </symbol>
+  <symbol id="icon-checked" viewBox="0 0 32 32">
+  <title>checked</title>
+  <path d="M28 0h-24c-2.2 0-4 1.8-4 4v24c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4v-24c0-2.2-1.8-4-4-4zM14 24.828l-7.414-7.414 2.828-2.828 4.586 4.586 9.586-9.586 2.828 2.828-12.414 12.414z"></path>
+  </symbol>
+  <symbol id="icon-unchecked" viewBox="0 0 32 32">
+  <title>unchecked</title>
+  <path d="M28 0h-24c-2.2 0-4 1.8-4 4v24c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4v-24c0-2.2-1.8-4-4-4zM28 28h-24v-24h24v24z"></path>
+  </symbol>
+  <symbol id="icon-plus" viewBox="0 0 32 32">
+  <title>plus</title>
+  <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+  </symbol>
+  <symbol id="icon-minus" viewBox="0 0 32 32">
+  <title>minus</title>
+  <path d="M0 13v6c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1h-30c-0.552 0-1 0.448-1 1z"></path>
+  </symbol>
+  <symbol id="icon-moon" viewBox="0 0 32 32">
+  <title>moon-stars</title>
+  <path d="M18.214 11.762l-1.214 3.238-1.214-3.238-2.286-0.762 2.286-0.762 1.214-3.238 1.214 3.238 2.286 0.762-2.286 0.762zM22.214 18.238l-1.214-3.238-1.214 3.238-2.286 0.762 2.286 0.762 1.214 3.238 1.214-3.238 2.286-0.762-2.286-0.762zM14.836 22.331v0c0.088-0.351 0.142-0.716 0.158-1.091-0.468 0.165-0.971 0.254-1.495 0.254-2.485 0-4.5-2.015-4.5-4.5 0-0.524 0.090-1.027 0.254-1.495-0.374 0.016-0.739 0.070-1.091 0.158-2.392 0.597-4.163 2.76-4.163 5.336 0 3.038 2.462 5.5 5.5 5.5 2.577 0 4.739-1.772 5.337-4.163zM5 20.995c0-1.961 1.255-3.63 3.005-4.246-0.004 0.081-0.005 0.163-0.005 0.246 0 3.038 2.462 5.5 5.5 5.5 0.082 0 0.164-0.002 0.246-0.005-0.616 1.751-2.284 3.005-4.246 3.005-2.485 0-4.5-2.015-4.5-4.5v0zM26.867 12.429l1.633 0.571-1.633 0.571-0.867 2.429-0.867-2.429-1.633-0.571 1.633-0.571 0.867-2.429 0.867 2.429z"></path>
+  </symbol>
+  
+  <symbol id="icon-drop" viewBox="0 0 512 512">
+    <title>drop-droplet</title>
+    <rect fill="#0099FF" x="0" y="0" width="32" height="32" rx="3" ry="3"></rect>
+
+    <path d="M263.444,197.879c-3.611-4.556-11.278-4.556-14.889,0c-4.333,5.495-106.333,135.305-106.333,195.505
+			c0,62.736,51.037,113.778,113.778,113.778c62.741,0,113.778-51.042,113.778-113.778
+			C369.778,333.184,267.778,203.374,263.444,197.879z M256,488.198c-52.278,0-94.815-42.533-94.815-94.815
+			c0-41.046,62.731-131.972,94.815-174.143c32.083,42.167,94.815,133.074,94.815,174.143
+			C350.815,445.665,308.278,488.198,256,488.198z"/>
+      <path d="M434.167,8.318c-3.593-4.639-11.407-4.639-15,0c-7.963,10.292-77.833,101.81-77.833,146.5
+			c0,47.893,38.278,86.861,85.333,86.861c47.056,0,85.333-38.968,85.333-86.861C512,110.128,442.13,18.61,434.167,8.318z
+			 M426.667,222.716c-36.593,0-66.37-30.458-66.37-67.898c0-28.958,42.667-92.801,66.37-124.949
+			c23.704,32.148,66.37,95.991,66.37,124.949C493.037,192.258,463.259,222.716,426.667,222.716z"/>
+      <path d="M92.833,8.318c-3.593-4.639-11.407-4.639-15,0C69.87,18.61,0,110.128,0,154.818c0,47.893,38.278,86.861,85.333,86.861
+			c47.056,0,85.333-38.968,85.333-86.861C170.667,110.128,100.796,18.61,92.833,8.318z M85.333,222.716
+			c-36.593,0-66.37-30.458-66.37-67.898c0-28.958,42.667-92.801,66.37-124.949c23.704,32.148,66.37,95.991,66.37,124.949
+			C151.704,192.258,121.926,222.716,85.333,222.716z"/>
+
+  </symbol>
+  <symbol id="icon-cancel-circle" viewBox="0 0 32 32">
+  <title>cancel-circle</title>
+  <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+  <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
+  </symbol>
+  <symbol id="FAQ">
+    <title>FAQ</title>
+    <path d= xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="100" height="100"
+    viewBox="0 0 32 32"
+    style=" fill: #f77c45;"><g f-linecap="bunone" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#f77c45"><path d="M73.96,24.08c-4.74204,0 -8.6,3.85796 -8.6,8.6v44.72h-32.68c-4.74204,0 -8.6,3.85796 -8.6,8.6v46.44c0,4.74204 3.85796,8.6 8.6,8.6h1.70656c-0.08256,3.9732 -0.76234,6.94359 -6.36266,12.54391c-0.49192,0.49192 -0.63949,1.23125 -0.37289,1.87453c0.26488,0.64328 0.8941,1.06156 1.58898,1.06156c10.84116,0 21.19325,-8.69804 25.10797,-15.48h43.69203c4.74204,0 8.6,-3.85796 8.6,-8.6v-44.72h11.01203c3.913,6.78196 14.26681,15.48 25.10797,15.48c0.69488,0 1.3241,-0.41828 1.58898,-1.06156c0.2666,-0.64328 0.11903,-1.38261 -0.37289,-1.87453c-5.60032,-5.60032 -6.28009,-8.57071 -6.36266,-12.54391h1.70656c4.74204,0 8.6,-3.85796 8.6,-8.6v-46.44c0,-4.74204 -3.85796,-8.6 -8.6,-8.6zM73.96,27.52h65.36c2.84488,0 5.16,2.31512 5.16,5.16v46.44c0,2.84488 -2.31512,5.16 -5.16,5.16h-3.44c-0.95116,0 -1.72,0.76884 -1.72,1.72c0,4.49264 -0.00019,7.9489 4.23617,13.22586c-8.21988,-1.96424 -15.6509,-8.94008 -18.17758,-13.99516c-0.2924,-0.58136 -0.88671,-0.9507 -1.53859,-0.9507h-44.72c-2.84488,0 -5.16,-2.31512 -5.16,-5.16v-46.44c0,-2.84488 2.31512,-5.16 5.16,-5.16zM73.96,30.96c-0.96492,0 -1.72,0.75508 -1.72,1.72v46.44c0,0.96492 0.75508,1.72 1.72,1.72h36.98c0.47472,0 0.86,-0.38528 0.86,-0.86c0,-0.47472 -0.38528,-0.86 -0.86,-0.86h-36.98v-46.44h6.02c0.47472,0 0.86,-0.38528 0.86,-0.86c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM85.14,30.96c-0.47472,0 -0.86,0.38528 -0.86,0.86c0,0.47472 0.38528,0.86 0.86,0.86h5.16c0.47472,0 0.86,-0.38528 0.86,-0.86c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM93.955,30.96c-0.47472,0 -0.86,0.38528 -0.86,0.86c0,0.47472 0.38528,0.86 0.86,0.86h3.225c0.47472,0 0.86,-0.38528 0.86,-0.86c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM106.64672,36.12c-0.71208,0 -1.16283,0.29536 -1.35719,0.88016l-10.63914,33.86586c-0.03268,0.06536 -0.05039,0.1649 -0.05039,0.29563c0,0.3268 0.13792,0.58665 0.41656,0.78273c0.27864,0.19608 0.6013,0.29563 0.96078,0.29563c0.55728,0 0.91496,-0.2487 1.07836,-0.74578l2.41203,-7.78031h14.33445l2.43891,7.79039c0.13244,0.4902 0.4629,0.7357 0.99437,0.7357c0.36464,0 0.69845,-0.08511 0.99773,-0.25195c0.29756,-0.16856 0.4468,-0.36577 0.4468,-0.59797c0,-0.0516 -0.00967,-0.10793 -0.02687,-0.16125c-0.0172,-0.05676 -0.02352,-0.08063 -0.02352,-0.08063l-10.62234,-34.12453c-0.19436,-0.602 -0.64847,-0.90367 -1.36055,-0.90367zM106.65344,40.52078l6.45672,20.93563h-12.94367zM140.18,53.32c-0.47472,0 -0.86,0.38528 -0.86,0.86v12.04c0,0.47472 0.38528,0.86 0.86,0.86c0.47472,0 0.86,-0.38528 0.86,-0.86v-12.04c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM140.18,70.52c-0.47472,0 -0.86,0.38528 -0.86,0.86v7.74h-2.58c-0.47472,0 -0.86,0.38528 -0.86,0.86c0,0.47472 0.38528,0.86 0.86,0.86h2.58c0.96492,0 1.72,-0.75508 1.72,-1.72v-7.74c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM32.68,80.84h32.85469c0.7998,3.91988 4.27151,6.88 8.42531,6.88h29.24v44.72c0,2.84488 -2.31512,5.16 -5.16,5.16h-44.72c-0.65188,0 -1.24619,0.36762 -1.53859,0.9507c-2.5284,5.05336 -9.9577,12.03092 -18.17758,13.99516c4.23636,-5.27868 4.23617,-8.73322 4.23617,-13.22586c0,-0.95116 -0.76884,-1.72 -1.72,-1.72h-3.44c-2.84488,0 -5.16,-2.31512 -5.16,-5.16v-46.44c0,-2.84488 2.31512,-5.16 5.16,-5.16zM32.68,84.28c-0.96492,0 -1.72,0.75508 -1.72,1.72v33.54c0,0.47472 0.38528,0.86 0.86,0.86c0.47472,0 0.86,-0.38528 0.86,-0.86v-33.54h26.66c0.47472,0 0.86,-0.38528 0.86,-0.86c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM65.33313,91.16c-3.14244,0 -5.64216,0.82794 -7.50148,2.48258c-1.86276,1.65636 -2.79164,4.26842 -2.79164,7.83742v15.57742c0,3.37464 0.82622,5.88888 2.48258,7.5418c1.65464,1.65636 3.90271,2.56441 6.73555,2.72781v4.03125c0,0.71896 0.37711,1.08172 1.12875,1.08172c0.27176,0 0.51718,-0.08987 0.73906,-0.26875c0.2236,-0.1806 0.33594,-0.45349 0.33594,-0.81297v-4.03125c2.83284,-0.16512 5.07583,-1.07317 6.73219,-2.72781c1.65636,-1.65292 2.48594,-4.16716 2.48594,-7.5418v-15.57742c0,-3.57072 -0.94659,-6.18278 -2.84203,-7.83742c-1.89372,-1.65464 -4.39852,-2.48258 -7.50484,-2.48258zM65.33313,93.52164c2.49228,0 4.41621,0.66263 5.76469,1.98875c1.34848,1.32612 2.02234,3.31737 2.02234,5.96961v15.57742c0,4.88136 -2.21896,7.50482 -6.65828,7.8643v-3.83305c0,-0.688 -0.35948,-1.03133 -1.075,-1.03133c-0.75164,0 -1.12875,0.34333 -1.12875,1.03133v3.88008c-4.4376,-0.3612 -6.65828,-2.99729 -6.65828,-7.91133v-15.57406c0,-5.30792 2.57672,-7.96172 7.73328,-7.96172zM98.9,96.32c-0.47472,0 -0.86,0.38528 -0.86,0.86v35.26h-6.02c-0.47472,0 -0.86,0.38528 -0.86,0.86c0,0.47472 0.38528,0.86 0.86,0.86h6.02c0.96492,0 1.72,-0.75508 1.72,-1.72v-35.26c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM31.82,123.84c-0.47472,0 -0.86,0.38528 -0.86,0.86v1.72c0,0.47472 0.38528,0.86 0.86,0.86c0.47472,0 0.86,-0.38528 0.86,-0.86v-1.72c0,-0.47472 -0.38528,-0.86 -0.86,-0.86zM81.7,132.44c-0.47472,0 -0.86,0.38528 -0.86,0.86c0,0.47472 0.38528,0.86 0.86,0.86h5.16c0.47472,0 0.86,-0.38528 0.86,-0.86c0,-0.47472 -0.38528,-0.86 -0.86,-0.86z"></path>
+  </symbol>
+  <symbol id="icon-offline" viewBox="0 0 32 32">
+  <title>airplane</title>
+  <path d="M24 19.999l-5.713-5.713 13.713-10.286-4-4-17.141 6.858-5.397-5.397c-1.556-1.556-3.728-1.928-4.828-0.828s-0.727 3.273 0.828 4.828l5.396 5.396-6.858 17.143 4 4 10.287-13.715 5.713 5.713v7.999h4l2-6 6-2v-4l-7.999 0z"></path>
+  </symbol>
+  </defs>
+</svg>
+
+
+<header class="main-header">
+  <h1 class="main-header__title"><svg viewBox="0, 0, 100, 100" class="icon main-header__title__icon"><use xlink:href="#icon-drop"></use></svg>Period Tracker </h1>
+  <div class="main-header__status"><svg id="status-icon-offline" class="icon main-header__status__icon"><use xlink:href="#icon-offline"></use></svg></div>
+</header>
+
+<nav class="main-nav">
+  <ul class="main-nav__list">
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="#/home"><svg class="icon main-nav__icon"><use xlink:href="#icon-home"></use></svg>Home</a></li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="#/calendar"><svg class="icon main-nav__icon"><use xlink:href="#icon-calendar"></use></svg>Calendar</a></li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="#/log"><svg class="icon main-nav__icon"><use xlink:href="#icon-log"></use></svg>log</a></li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="#/settings"><svg class="icon main-nav__icon"><use xlink:href="#FAQ"></use></svg>FAQ</a></li>
+  </ul>
+</nav>
+
+<main class="main-content">
+<!-- HOME -->
+  <section id="home" class="main-section main-section--home">
+    <div class="home__wrapper">
+      <div id="home-calc">
+        <div class="home__calc">next: <span id="next" class="home__next">&nbsp;</span></div>
+        <div class="home__calc">days left: <span id="countdown" class="home__countdown">&nbsp;</span></div>
+        <div class="home__calc">period day: <span id="counter" class="home__counter">&nbsp;</span></div>
+      </div>
+
+      <button class="home__add" id="home-add">Period just started <span class="home__add__tap">tap here</span></button>
+      
+      <form class="add-form" id="add-form">
+        <input type="date" id="add-date" class="add-form__date" required>
+        <input type="reset" value="Cancel" class="add-form__button">
+        <input type="submit" value="Save" class="add-form__button">
+      </form>
+      <button class="settings__option settings__button" id="gcal-connect"><span id="gcal-connect-on">Connect Google account</span><span id="gcal-connect-off" style="display:none">Disconnect <strong id="gcal-connect-user"></strong></span></button>
+      <!-- <button class="settings__option settings__button">Disconnect Google account</button> -->
+      <div class="settings">
+      <div class="input-checkbox">
+        <input type="checkbox" class="input-checkbox__check" id="settings-week-start">
+        <label class="input-checkbox__label settings__option settings__button" for="settings-week-start">Mon-Sun calendar<svg class="icon input-checkbox__icon"><use xlink:href="#icon-unchecked" class="input-checkbox__icon__unchecked"></use><use xlink:href="#icon-checked" class="input-checkbox__icon__checked"></use></svg></label>
+      </div>
+
+      <div class="input-checkbox">
+        <input type="checkbox" class="input-checkbox__check" id="settings-extended-month">
+        <label class="input-checkbox__label settings__option settings__button" for="settings-extended-month">Show extended month<svg class="icon input-checkbox__icon"><use xlink:href="#icon-unchecked" class="input-checkbox__icon__unchecked"></use><use xlink:href="#icon-checked" class="input-checkbox__icon__checked"></use></svg></label>
+      </div>
+      
+      <div class="settings__option">Period length 
+        <div class="input-number js-number">
+          <button class="input-number__button js-number__sub"><svg class="icon input-number__icon"><use xlink:href="#icon-minus"></use></svg></button>
+          <input type="number" class="input-number__input js-number__input" id="settings-period-length" min="1">
+          <button class="input-number__button js-number__add"><svg class="icon input-number__icon"><use xlink:href="#icon-plus"></use></svg></button>
+        </div>
+        <div class="settings__option">Cycle length 
+          <div class="input-number js-number">
+            <button class="input-number__button js-number__sub"><svg class="icon input-number__icon"><use xlink:href="#icon-minus"></use></svg></button>
+            <input type="number" class="input-number__input js-number__input" id="settings-cycle-length" min="1">
+            <button class="input-number__button js-number__add"><svg class="icon input-number__icon"><use xlink:href="#icon-plus"></use></svg></button>
+          </div>
+        </div>
+        
+        <p class="settings__info">
+          </p>
+    
+    </div>
+  </section>
+
+
+<!-- CALENDAR -->
+  <section id="calendar" class="main-section">
+    <div id="calendar-data"></div>
+  </section>
+
+
+<!-- LOG -->
+  <section id="log" class="main-section">
+    <div class="log-average">
+      <span id="average" class="log-average__counter">&nbsp;</span> Days in your average cycle
+   
+   <button class="log__add" id="log-add">Add entry</button>
+
+    <form class="add-form" id="add-form">
+      <input type="date" id="add-date" class="add-form__date" required>
+      <input type="reset" value="Cancel" class="add-form__button">
+      <input type="submit" value="Save" class="add-form__button">
+    </form>
+
+    <div id="log-data"></div>
+  </section>
+
+
+<!-- SETTINGS -->
+  <section id="settings" class="main-section main-section--settings">
+    <div class="settings">
+      <button class="settings__option settings__button"></button>
+     <button class="accordion">How often should you wash your genital area during periods?</button>
+     <div class="panel">
+       <p>Blood is a favorable environment for bacteria to thrive, which is why doctors recommend rinsing the genital area at least twice a day while on your period: in the morning and evening. It is acceptable to do this more often if you feel uncomfortable. Insufficient menstrual hygiene can lead to unpleasant consequences.</p>
+     </div>
+     <button class="settings__option settings__button" id="delete-all"></button>
+     <button class="accordion">What do gynecologists recommend using for hygiene during periods?</button>
+     <div class="panel">
+       <p>The vagina is a self-cleaning organ. It is very important that you don’t disrupt its natural flora, and this is exactly what happens if you use regular soap or even specific cosmetic products for intimate hygiene. Doctors recommend washing the genital area with plain warm water without soap.</p>
+     </div>
+     
+      <button class="settings__option settings__button" ></button> 
+      <button class="accordion">Should you use sanitary products that are more absorbent than is really necessary and change them less frequently?</button>
+      <div class="panel"><p>Always choose sanitary products with an absorbency level appropriate for your menstrual flow. Changing them less frequently than once in 4–8 hours (4 hours for pads and 4-8 hours for tampons) may be fraught with unpleasant consequences because a hygienic product is a breeding ground for bacteria and infections.</p>
+      </div>
+      <button class="settings__option settings__button" id="delete-all"></button>
+      <button class="accordion">Can you bathe while on your period?</button>
+      <div class="panel">
+        <p>There is no need to deprive yourself of the pleasure of taking a bath while on your period. Normally, running water can’t do any harm. However, make sure the bathtub itself is clean since during menstruation your immune system is more susceptible to infection. </p>
+      </div>
+      
+       <button class="settings__option settings__button" ></button> 
+       <button class="accordion">What is the right pH level for intimate hygiene products?</button>
+       <div class="panel">
+         <p>The vagina’s pH is acidic due to beneficial lactobacilli inhabiting it. They protect the body against infections and other pathogens.
+
+          Many experts recommend washing the genital area with running warm water without any detergents, and some suggest using intimate hygiene products with an acidic pH of 3.8.
+          
+          </p>
+       </div>
+       <button class="settings__option settings__button" id="delete-all"></button>
+       <button class="accordion">If you use a pad for the night and sleep for about 8 hours, should you get up every 4 hours to change it?</button>
+       <div class="panel">
+         <p>During the day, when you are active, your menstrual flow is normally heavier, so the pad absorbs more blood, sweat, and sebum. This creates a breeding ground for bacteria, which is why you shouldn’t wear one pad for more than 4 hours.
+
+          When you are asleep, your bodily functions slow down and the bleeding intensity decreases, so it is acceptable to wear a pad overnight.</p>
+       </div>
+       
+        <button class="settings__option settings__button" ></button> 
+     
+     
+    </div>
+  </section>
+
+
+<!-- ALERTS -->
+  <div id="alerts" class="alerts-wrapper"></div>
+</main>
+<script src="js/accordion.js"></script>
+<script src="vendor/moment-2.13.0.min.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/config.js"></script>
+<script src="js/gcal.js"></script>
+<script src="js/model.js"></script>
+<script src="js/template.js"></script>
+<script src="js/view.js"></script>
+<script src="js/controller.js"></script>
+<!-- <script src="js/mine.js"></script> -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
